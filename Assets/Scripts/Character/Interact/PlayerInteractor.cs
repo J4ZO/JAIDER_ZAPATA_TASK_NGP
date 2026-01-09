@@ -9,15 +9,13 @@ public class PlayerInteractor : MonoBehaviour
 
    public void TryInteract()
    {
-      Debug.Log("I Interact");
       Collider2D hitObject = Physics2D.OverlapCircle(transform.position, radiusCollider, layerMask);
-      
-      
+
       if (hitObject == null) return;
       
-      Debug.Log("Pressed");
       IInteractable interactable = hitObject.GetComponent<IInteractable>();
       interactable?.Interact();
+      Debug.Log("Interacted" + hitObject.name);
    }
 
    private void OnDrawGizmos()
@@ -25,4 +23,7 @@ public class PlayerInteractor : MonoBehaviour
       Gizmos.color = Color.orange;
       Gizmos.DrawWireSphere(transform.position, radiusCollider);
    }
+
+   
+   
 }
