@@ -1,16 +1,40 @@
+using System;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private InventorySlotUI inventorySlotUI;
+    [SerializeField] private int inventorySlot = 16;
+    public bool isInventoryOpen = false;
+    
+    private void OnEnable()
     {
+        inventorySlotUI.InitialializeSlotUI(inventorySlot);
+    }
+    
+
+
+    private void ToggleInventory()
+    {
+        isInventoryOpen = !isInventoryOpen;
+        gameObject.SetActive(isInventoryOpen);
         
+        Time.timeScale = isInventoryOpen ? 0f : 1f;
+    }
+    
+    public void CloseInventory()
+    {
+        if (isInventoryOpen)
+        {
+            ToggleInventory();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OpenInventory()
     {
-        
+        if (!isInventoryOpen)
+        {
+            ToggleInventory();
+        }
     }
 }
