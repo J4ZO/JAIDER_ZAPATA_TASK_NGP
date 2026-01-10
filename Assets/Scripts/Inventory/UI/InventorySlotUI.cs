@@ -12,16 +12,18 @@ public class InventorySlotUI : MonoBehaviour
     public void InitialializeSlotUI()
     {
         if (listInventorySlotUI == null) return;
-        foreach (InventorItemUI itemUI in listInventorySlotUI)
+        for (int i = 3; i < listInventorySlotUI.Count; i ++)
         {
-            if(listInventorySlotUI[0] == itemUI || listInventorySlotUI[1] == itemUI || listInventorySlotUI[2] == itemUI) continue;
+            InventorItemUI itemUI = listInventorySlotUI[i];
             bool hasSprite = itemUI.imageChild != null && 
                              itemUI.imageChild.sprite != null;
             itemUI.gameObject.SetActive(hasSprite);
-            
-            Color color = itemUI.imageChild.color;
-            color.a = Mathf.Clamp01(0);
-            itemUI.imageChild.color = color;
+            if(!hasSprite)
+            {
+                Color color = itemUI.imageChild.color;
+                color.a = Mathf.Clamp01(0);
+                itemUI.imageChild.color = color;
+            }
         }
     }
 
@@ -39,7 +41,6 @@ public class InventorySlotUI : MonoBehaviour
                 itemUI.InsertData(id, nameObject, sprite, amount, description);
                 return;
             }
-            return;
         }
     }
     

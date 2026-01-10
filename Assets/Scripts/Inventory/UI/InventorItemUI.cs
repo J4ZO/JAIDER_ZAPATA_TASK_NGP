@@ -15,4 +15,15 @@ public class InventorItemUI : MonoBehaviour
         nameObject = name;
         descriptionObject = description;
     }
+
+    public void DeleteData()
+    {
+        Color color = imageChild.color;
+        color.a = Mathf.Clamp01(0);
+        imageChild.color = color;
+        imageChild.sprite = null;
+        amountChild.text = "";
+        nameObject = "";
+        descriptionObject = "";
+    }
 }
