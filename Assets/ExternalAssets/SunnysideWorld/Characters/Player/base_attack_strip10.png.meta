@@ -1,31 +1,40 @@
 fileFormatVersion: 2
-guid: a95c52949314b9742b0978de16ba1f21
+guid: 8035b6d0ea8a53d44b5e60e0270d7491
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8465330516441225598
-    second: spr_hurt_strip8_0
+      213: 2037729144460287187
+    second: base_attack_strip10_0
   - first:
-      213: 7469723376485315728
-    second: spr_hurt_strip8_1
+      213: -5921131596595627069
+    second: base_attack_strip10_1
   - first:
-      213: 6497183468236780749
-    second: spr_hurt_strip8_2
+      213: -4545706396013278618
+    second: base_attack_strip10_2
   - first:
-      213: 2595452368764951246
-    second: spr_hurt_strip8_3
+      213: 3339717073172378955
+    second: base_attack_strip10_3
   - first:
-      213: 197603063571110353
-    second: spr_hurt_strip8_4
+      213: 8536789334769003231
+    second: base_attack_strip10_4
   - first:
-      213: 8003808659369896561
-    second: spr_hurt_strip8_5
+      213: -7739973837865852884
+    second: base_attack_strip10_5
   - first:
-      213: 1841540171287809741
-    second: spr_hurt_strip8_6
+      213: 6875997019405343397
+    second: base_attack_strip10_6
   - first:
-      213: -6177013693489874916
-    second: spr_hurt_strip8_7
+      213: -2390471166699988579
+    second: base_attack_strip10_7
+  - first:
+      213: 1702722092792225050
+    second: base_attack_strip10_8
+  - first:
+      213: -4475158334380982692
+    second: base_attack_strip10_9
+  - first:
+      213: -1117539139757975873
+    second: base_attack_strip10_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,7 +143,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_hurt_strip8_0
+      name: base_attack_strip10_0
       rect:
         serializedVersion: 2
         x: 0
@@ -149,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2862f3d1fba158a80800000000000000
-      internalID: -8465330516441225598
+      spriteID: 3dc140c4cd7774c10800000000000000
+      internalID: 2037729144460287187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_1
+      name: base_attack_strip10_1
       rect:
         serializedVersion: 2
         x: 96
@@ -171,14 +180,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 094b6d9a5d9c9a760800000000000000
-      internalID: 7469723376485315728
+      spriteID: 3cb73943f2ae3dda0800000000000000
+      internalID: -5921131596595627069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_2
+      name: base_attack_strip10_2
       rect:
         serializedVersion: 2
         x: 192
@@ -193,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc43bc8d0f1aa2a50800000000000000
-      internalID: 6497183468236780749
+      spriteID: 66a4864fd186ae0c0800000000000000
+      internalID: -4545706396013278618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_3
+      name: base_attack_strip10_3
       rect:
         serializedVersion: 2
         x: 288
@@ -215,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eca5ea79d26e40420800000000000000
-      internalID: 2595452368764951246
+      spriteID: b453fb4cbfe095e20800000000000000
+      internalID: 3339717073172378955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_4
+      name: base_attack_strip10_4
       rect:
         serializedVersion: 2
         x: 384
@@ -237,14 +246,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d95faa70f60eb200800000000000000
-      internalID: 197603063571110353
+      spriteID: fdaef3d8ba4c87670800000000000000
+      internalID: 8536789334769003231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_5
+      name: base_attack_strip10_5
       rect:
         serializedVersion: 2
         x: 480
@@ -259,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17a20f7d19d331f60800000000000000
-      internalID: 8003808659369896561
+      spriteID: c2060377dc6169490800000000000000
+      internalID: -7739973837865852884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_6
+      name: base_attack_strip10_6
       rect:
         serializedVersion: 2
         x: 576
@@ -281,14 +290,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dcec83567077e8910800000000000000
-      internalID: 1841540171287809741
+      spriteID: 5aadc4acbd27c6f50800000000000000
+      internalID: 6875997019405343397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_7
+      name: base_attack_strip10_7
       rect:
         serializedVersion: 2
         x: 672
@@ -303,8 +312,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c18ffc2e5c6d64aa0800000000000000
-      internalID: -6177013693489874916
+      spriteID: d99980f932753ded0800000000000000
+      internalID: -2390471166699988579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base_attack_strip10_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d1714d8b841a710800000000000000
+      internalID: 1702722092792225050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: base_attack_strip10_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5eb79d843b05e1c0800000000000000
+      internalID: -4475158334380982692
       vertices: []
       indices: 
       edges: []
@@ -313,7 +366,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 843ae8f15cd52da41affddaf9e680f7b
+    spriteID: a2eade13924b14f46b4dba27067383aa
     internalID: 0
     vertices: []
     indices: 
@@ -323,16 +376,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      spr_hurt_strip8_0: -8465330516441225598
-      spr_hurt_strip8_1: 7469723376485315728
-      spr_hurt_strip8_2: 6497183468236780749
-      spr_hurt_strip8_3: 2595452368764951246
-      spr_hurt_strip8_4: 197603063571110353
-      spr_hurt_strip8_5: 8003808659369896561
-      spr_hurt_strip8_6: 1841540171287809741
-      spr_hurt_strip8_7: -6177013693489874916
+      base_attack_strip10_0: 2037729144460287187
+      base_attack_strip10_1: -5921131596595627069
+      base_attack_strip10_2: -4545706396013278618
+      base_attack_strip10_3: 3339717073172378955
+      base_attack_strip10_4: 8536789334769003231
+      base_attack_strip10_5: -7739973837865852884
+      base_attack_strip10_6: 6875997019405343397
+      base_attack_strip10_7: -2390471166699988579
+      base_attack_strip10_8: 1702722092792225050
+      base_attack_strip10_9: -4475158334380982692
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

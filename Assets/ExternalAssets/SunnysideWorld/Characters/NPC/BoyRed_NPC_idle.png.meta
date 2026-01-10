@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: a95c52949314b9742b0978de16ba1f21
+guid: 7978de928cb318e479aae0ffd98a4805
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8465330516441225598
-    second: spr_hurt_strip8_0
+      213: 3180821797196647713
+    second: BoyRed_NPC_idle_0
   - first:
-      213: 7469723376485315728
-    second: spr_hurt_strip8_1
+      213: -8069484624840385259
+    second: BoyRed_NPC_idle_1
   - first:
-      213: 6497183468236780749
-    second: spr_hurt_strip8_2
+      213: 7330043630029936392
+    second: BoyRed_NPC_idle_2
   - first:
-      213: 2595452368764951246
-    second: spr_hurt_strip8_3
+      213: -3645847107445879955
+    second: BoyRed_NPC_idle_3
   - first:
-      213: 197603063571110353
-    second: spr_hurt_strip8_4
+      213: -5549290354512407090
+    second: BoyRed_NPC_idle_4
   - first:
-      213: 8003808659369896561
-    second: spr_hurt_strip8_5
+      213: -548947380880793007
+    second: BoyRed_NPC_idle_5
   - first:
-      213: 1841540171287809741
-    second: spr_hurt_strip8_6
+      213: -4389537629083711111
+    second: BoyRed_NPC_idle_6
   - first:
-      213: -6177013693489874916
-    second: spr_hurt_strip8_7
+      213: 153251079994099335
+    second: BoyRed_NPC_idle_7
+  - first:
+      213: -7554367697832956769
+    second: BoyRed_NPC_idle_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,7 +137,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_hurt_strip8_0
+      name: BoyRed_NPC_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -149,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2862f3d1fba158a80800000000000000
-      internalID: -8465330516441225598
+      spriteID: 12dc9b3629c842c20800000000000000
+      internalID: 3180821797196647713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_1
+      name: BoyRed_NPC_idle_1
       rect:
         serializedVersion: 2
         x: 96
@@ -171,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 094b6d9a5d9c9a760800000000000000
-      internalID: 7469723376485315728
+      spriteID: 51d99e7dc7e630090800000000000000
+      internalID: -8069484624840385259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_2
+      name: BoyRed_NPC_idle_2
       rect:
         serializedVersion: 2
         x: 192
@@ -193,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc43bc8d0f1aa2a50800000000000000
-      internalID: 6497183468236780749
+      spriteID: 8079c0468db89b560800000000000000
+      internalID: 7330043630029936392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_3
+      name: BoyRed_NPC_idle_3
       rect:
         serializedVersion: 2
         x: 288
@@ -215,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eca5ea79d26e40420800000000000000
-      internalID: 2595452368764951246
+      spriteID: d6b8d4f4f59576dc0800000000000000
+      internalID: -3645847107445879955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_4
+      name: BoyRed_NPC_idle_4
       rect:
         serializedVersion: 2
         x: 384
@@ -237,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d95faa70f60eb200800000000000000
-      internalID: 197603063571110353
+      spriteID: ec559cfe2d5fcf2b0800000000000000
+      internalID: -5549290354512407090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_5
+      name: BoyRed_NPC_idle_5
       rect:
         serializedVersion: 2
         x: 480
@@ -259,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17a20f7d19d331f60800000000000000
-      internalID: 8003808659369896561
+      spriteID: 152283af34fb168f0800000000000000
+      internalID: -548947380880793007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_6
+      name: BoyRed_NPC_idle_6
       rect:
         serializedVersion: 2
         x: 576
@@ -281,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dcec83567077e8910800000000000000
-      internalID: 1841540171287809741
+      spriteID: 979414a78ca3513c0800000000000000
+      internalID: -4389537629083711111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_7
+      name: BoyRed_NPC_idle_7
       rect:
         serializedVersion: 2
         x: 672
@@ -303,8 +306,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c18ffc2e5c6d64aa0800000000000000
-      internalID: -6177013693489874916
+      spriteID: 7864e789b05702200800000000000000
+      internalID: 153251079994099335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoyRed_NPC_idle_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c2bf38a9e792790800000000000000
+      internalID: -7554367697832956769
       vertices: []
       indices: 
       edges: []
@@ -313,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 843ae8f15cd52da41affddaf9e680f7b
+    spriteID: 5b20dd0fef0f146419b1d058235aa0ec
     internalID: 0
     vertices: []
     indices: 
@@ -323,16 +348,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      spr_hurt_strip8_0: -8465330516441225598
-      spr_hurt_strip8_1: 7469723376485315728
-      spr_hurt_strip8_2: 6497183468236780749
-      spr_hurt_strip8_3: 2595452368764951246
-      spr_hurt_strip8_4: 197603063571110353
-      spr_hurt_strip8_5: 8003808659369896561
-      spr_hurt_strip8_6: 1841540171287809741
-      spr_hurt_strip8_7: -6177013693489874916
+      BoyRed_NPC_idle_0: 3180821797196647713
+      BoyRed_NPC_idle_1: -8069484624840385259
+      BoyRed_NPC_idle_2: 7330043630029936392
+      BoyRed_NPC_idle_3: -3645847107445879955
+      BoyRed_NPC_idle_4: -5549290354512407090
+      BoyRed_NPC_idle_5: -548947380880793007
+      BoyRed_NPC_idle_6: -4389537629083711111
+      BoyRed_NPC_idle_7: 153251079994099335
+      BoyRed_NPC_idle_8: -7554367697832956769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

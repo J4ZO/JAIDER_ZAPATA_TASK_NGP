@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: a95c52949314b9742b0978de16ba1f21
+guid: fe6a75cac8218fc4dae62c066626df22
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8465330516441225598
-    second: spr_hurt_strip8_0
+      213: -6327114721421425320
+    second: Girl_NPC_idle_0
   - first:
-      213: 7469723376485315728
-    second: spr_hurt_strip8_1
+      213: 113488327602781279
+    second: Girl_NPC_idle_1
   - first:
-      213: 6497183468236780749
-    second: spr_hurt_strip8_2
+      213: 7705255511964959646
+    second: Girl_NPC_idle_2
   - first:
-      213: 2595452368764951246
-    second: spr_hurt_strip8_3
+      213: 3603108541052156124
+    second: Girl_NPC_idle_3
   - first:
-      213: 197603063571110353
-    second: spr_hurt_strip8_4
+      213: 1915354626097333983
+    second: Girl_NPC_idle_4
   - first:
-      213: 8003808659369896561
-    second: spr_hurt_strip8_5
+      213: -2868000053974435435
+    second: Girl_NPC_idle_5
   - first:
-      213: 1841540171287809741
-    second: spr_hurt_strip8_6
+      213: -2743540838986413443
+    second: Girl_NPC_idle_6
   - first:
-      213: -6177013693489874916
-    second: spr_hurt_strip8_7
+      213: -6617592017401391563
+    second: Girl_NPC_idle_7
+  - first:
+      213: 6230244390292307491
+    second: Girl_NPC_idle_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,7 +137,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_hurt_strip8_0
+      name: Girl_NPC_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -149,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2862f3d1fba158a80800000000000000
-      internalID: -8465330516441225598
+      spriteID: 8550880fea29138a0800000000000000
+      internalID: -6327114721421425320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_1
+      name: Girl_NPC_idle_1
       rect:
         serializedVersion: 2
         x: 96
@@ -171,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 094b6d9a5d9c9a760800000000000000
-      internalID: 7469723376485315728
+      spriteID: f5cbaec5801339100800000000000000
+      internalID: 113488327602781279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_2
+      name: Girl_NPC_idle_2
       rect:
         serializedVersion: 2
         x: 192
@@ -193,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc43bc8d0f1aa2a50800000000000000
-      internalID: 6497183468236780749
+      spriteID: e93ca4e50119eea60800000000000000
+      internalID: 7705255511964959646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_3
+      name: Girl_NPC_idle_3
       rect:
         serializedVersion: 2
         x: 288
@@ -215,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eca5ea79d26e40420800000000000000
-      internalID: 2595452368764951246
+      spriteID: cd8f694c020d00230800000000000000
+      internalID: 3603108541052156124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_4
+      name: Girl_NPC_idle_4
       rect:
         serializedVersion: 2
         x: 384
@@ -237,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d95faa70f60eb200800000000000000
-      internalID: 197603063571110353
+      spriteID: fd6ce6b62e4b49a10800000000000000
+      internalID: 1915354626097333983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_5
+      name: Girl_NPC_idle_5
       rect:
         serializedVersion: 2
         x: 480
@@ -259,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17a20f7d19d331f60800000000000000
-      internalID: 8003808659369896561
+      spriteID: 5997d0f6521d238d0800000000000000
+      internalID: -2868000053974435435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_6
+      name: Girl_NPC_idle_6
       rect:
         serializedVersion: 2
         x: 576
@@ -281,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dcec83567077e8910800000000000000
-      internalID: 1841540171287809741
+      spriteID: d7a0071942cfce9d0800000000000000
+      internalID: -2743540838986413443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_hurt_strip8_7
+      name: Girl_NPC_idle_7
       rect:
         serializedVersion: 2
         x: 672
@@ -303,8 +306,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c18ffc2e5c6d64aa0800000000000000
-      internalID: -6177013693489874916
+      spriteID: 53654562f179924a0800000000000000
+      internalID: -6617592017401391563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Girl_NPC_idle_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32e3e338346467650800000000000000
+      internalID: 6230244390292307491
       vertices: []
       indices: 
       edges: []
@@ -313,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 843ae8f15cd52da41affddaf9e680f7b
+    spriteID: 7e372a6bf8d8e7c44aa173e208e3bbae
     internalID: 0
     vertices: []
     indices: 
@@ -323,16 +348,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      spr_hurt_strip8_0: -8465330516441225598
-      spr_hurt_strip8_1: 7469723376485315728
-      spr_hurt_strip8_2: 6497183468236780749
-      spr_hurt_strip8_3: 2595452368764951246
-      spr_hurt_strip8_4: 197603063571110353
-      spr_hurt_strip8_5: 8003808659369896561
-      spr_hurt_strip8_6: 1841540171287809741
-      spr_hurt_strip8_7: -6177013693489874916
+      Girl_NPC_idle_0: -6327114721421425320
+      Girl_NPC_idle_1: 113488327602781279
+      Girl_NPC_idle_2: 7705255511964959646
+      Girl_NPC_idle_3: 3603108541052156124
+      Girl_NPC_idle_4: 1915354626097333983
+      Girl_NPC_idle_5: -2868000053974435435
+      Girl_NPC_idle_6: -2743540838986413443
+      Girl_NPC_idle_7: -6617592017401391563
+      Girl_NPC_idle_8: 6230244390292307491
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
