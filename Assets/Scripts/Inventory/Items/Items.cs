@@ -18,6 +18,7 @@ public enum ItemType
     None,
     food,
     tool,
-    coin
+    coin,
+    flower
 }
 

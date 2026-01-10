@@ -41,6 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Water
+    uniqueID: 1307614161
+    locked: 0
+  - name: Ground
+    uniqueID: 3542789579
+    locked: 0
+  - name: WalkInFront
+    uniqueID: 974323175
+    locked: 0
+  - name: Collisions
+    uniqueID: 2010138691
+    locked: 0
+  - name: Decoration
+    uniqueID: 2114596253
+    locked: 0
   - name: Object
     uniqueID: 2495420817
     locked: 0
@@ -49,6 +64,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3662093531
+    locked: 0
+  - name: WalkBehind
+    uniqueID: 3388547989
     locked: 0
   m_RenderingLayers:
   - Default
