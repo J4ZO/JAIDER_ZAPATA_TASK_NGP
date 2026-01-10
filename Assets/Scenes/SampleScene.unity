@@ -715,13 +715,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2454757159857118015, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6097962258723315246, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
       propertyPath: m_Name
       value: Slot (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6097962258723315246, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -816,13 +820,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2454757159857118015, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6097962258723315246, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
       propertyPath: m_Name
       value: Slot (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6097962258723315246, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4035,13 +4043,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2454757159857118015, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454757159857118015, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454757159857118015, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454757159857118015, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6097962258723315246, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
       propertyPath: m_Name
       value: Slot
       objectReference: {fileID: 0}
     - target: {fileID: 6097962258723315246, guid: 1027ece9e58e3f341b2f8fb7ec79d1cf, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

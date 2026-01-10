@@ -14,9 +14,14 @@ public class InventorySlotUI : MonoBehaviour
         if (listInventorySlotUI == null) return;
         foreach (InventorItemUI itemUI in listInventorySlotUI)
         {
+            if(listInventorySlotUI[0] == itemUI || listInventorySlotUI[1] == itemUI || listInventorySlotUI[2] == itemUI) continue;
             bool hasSprite = itemUI.imageChild != null && 
                              itemUI.imageChild.sprite != null;
             itemUI.gameObject.SetActive(hasSprite);
+            
+            Color color = itemUI.imageChild.color;
+            color.a = Mathf.Clamp01(0);
+            itemUI.imageChild.color = color;
         }
     }
 
@@ -28,6 +33,9 @@ public class InventorySlotUI : MonoBehaviour
             if (itemUI.imageChild == null || itemUI.imageChild.sprite == null)
             {
                 Debug.Log($"Added at: {itemUI.gameObject.name}");
+                Color color = itemUI.imageChild.color;
+                color.a = Mathf.Clamp01(1);
+                itemUI.imageChild.color = color;
                 itemUI.InsertData(id, nameObject, sprite, amount, description);
                 return;
             }
@@ -35,15 +43,4 @@ public class InventorySlotUI : MonoBehaviour
         }
     }
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
