@@ -66,8 +66,33 @@ public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         
         canvasGroup.blocksRaycasts = true;
         
-        // transform.SetParent(originalParent);
-        // rectTransform.anchoredPosition = Vector2.zero;
+        if (targetSlot != null)
+        {
+            InventoryDrop targetDrop = targetSlot.GetComponentInChildren<InventoryDrop>();
+            
+            if (targetDrop != null)
+            {
+                Transform targetOriginalParent = targetDrop.transform.parent;
+                
+                targetDrop.transform.SetParent(originalParent);
+                targetDrop.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                
+                transform.SetParent(targetOriginalParent);
+                rectTransform.anchoredPosition = Vector2.zero;
+            }
+            else
+            {
+                
+                transform.SetParent(targetSlot.transform);
+                rectTransform.anchoredPosition = Vector2.zero;
+            }
+        }
+        else
+        {
+            transform.SetParent(originalParent);
+            rectTransform.anchoredPosition = Vector2.zero;
+        }
+
     }
    
 }
