@@ -27,7 +27,7 @@ public class InventorySlotUI : MonoBehaviour
         }
     }
 
-    public void ShowItem(int id, string nameObject, Sprite sprite, int amount, string description )
+    public void ShowItem(int id, string nameObject, Sprite sprite, int amount, string description, ItemType type)
     {
         if (listInventorySlotUI == null) return;
         foreach (InventorItemUI itemUI in listInventorySlotUI)
@@ -38,7 +38,7 @@ public class InventorySlotUI : MonoBehaviour
                 Color color = itemUI.imageChild.color;
                 color.a = Mathf.Clamp01(1);
                 itemUI.imageChild.color = color;
-                itemUI.InsertData(id, nameObject, sprite, amount, description);
+                itemUI.InsertData(id, nameObject, sprite, amount, description, type);
                 return;
             }
         }

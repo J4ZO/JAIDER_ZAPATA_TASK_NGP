@@ -302,9 +302,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventorItemUI
   imageChild: {fileID: 2454757159857118015}
+  idObject: 0
   amountChild: {fileID: 7804352018323793281}
   nameObject: 
   descriptionObject: 
+  itemType: 0
 --- !u!1 &7369458452290711823
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +318,9 @@ GameObject:
   - component: {fileID: 7943016109203876486}
   - component: {fileID: 637680900830066363}
   - component: {fileID: 2454757159857118015}
+  - component: {fileID: 3120116134005624964}
+  - component: {fileID: 3585331254329069062}
+  - component: {fileID: 8805657223376356601}
   m_Layer: 5
   m_Name: object
   m_TagString: Untagged
@@ -382,3 +387,44 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3120116134005624964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369458452290711823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffafd2fc3f8cd734584afd53eb0b9d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryDrag
+  canvas: {fileID: 0}
+  originalParent: {fileID: 0}
+  dragLayer: {fileID: 0}
+  inventoryItemUI: {fileID: 7790268053418091100}
+--- !u!114 &3585331254329069062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369458452290711823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 316b62106cf3cab459634c113bd10584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryDrop
+  itemUI: {fileID: 7790268053418091100}
+--- !u!225 &8805657223376356601
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369458452290711823}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

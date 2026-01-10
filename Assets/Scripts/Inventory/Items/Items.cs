@@ -3,6 +3,7 @@ using UnityEngine;
 
 public enum ItemType
 {
+    None,
     food,
     tool,
     coin
@@ -17,3 +18,4 @@ public class Items : ScriptableObject
     public int amount;
     public String itemDescription;
 }
+

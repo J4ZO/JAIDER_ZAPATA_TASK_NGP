@@ -33,7 +33,7 @@ public class ObjectInteract : MonoBehaviour, IInteractable
     public void Interact()
     {
         Debug.Log("Interact");
-        inventorySlotUI.ShowItem(id, itemNameObject, spriteRenderer.sprite, amountObject, itemDescription);
+        inventorySlotUI.ShowItem(id, itemNameObject, spriteRenderer.sprite, amountObject, itemDescription, itemTypeObject);
         Destroy(gameObject);
     }
     

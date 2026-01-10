@@ -1,16 +1,73 @@
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
-public class InventoryDrag : MonoBehaviour
+public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private RectTransform rectTransform;
+    [SerializeField] Canvas canvas;
+    public Transform originalParent;
+    [SerializeField] private Transform dragLayer;
+    [SerializeField] private InventorItemUI inventoryItemUI;
+    private CanvasGroup canvasGroup;
+    
+    public static InventorItemUI CurrentDraggedItem { get; private set; }
+    private void Awake()
     {
-        
+        rectTransform = GetComponent<RectTransform>();
+        canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void OnDrag(PointerEventData eventData)
+    { 
+       rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    { 
+        CurrentDraggedItem = inventoryItemUI;
+        
+        if (inventoryItemUI == null || !inventoryItemUI.HasItem)
+        {
+            eventData.pointerDrag = null; 
+            return;
+        }
+        
+        originalParent = transform.parent;
+        transform.SetParent(dragLayer, true);
+        transform.SetAsLastSibling();
+        
+        canvasGroup.blocksRaycasts = false;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+    
+        InventorItemUI targetSlot = null;
+    
+        foreach (RaycastResult result in results)
+        {
+            InventorItemUI slot = result.gameObject.GetComponentInParent<InventorItemUI>();
+    
+            if (slot != inventoryItemUI)
+            {
+                targetSlot = slot;
+                break;
+            }
+        }
+    
+        if (targetSlot != null)
+        {
+            Debug.Log(targetSlot.name);
+        }
+        
+        canvasGroup.blocksRaycasts = true;
+        
+        // transform.SetParent(originalParent);
+        // rectTransform.anchoredPosition = Vector2.zero;
+    }
+   
 }
