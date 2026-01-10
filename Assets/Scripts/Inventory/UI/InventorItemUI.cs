@@ -1,16 +1,18 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventorItemUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Image imageChild;
+    public TMP_Text amountChild;
+    public string nameObject;
+    public string descriptionObject;
+    public void InsertData(int id, string name, Sprite sprite, int amount, string description )
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        imageChild.sprite = sprite;
+        amountChild.text = amount.ToString();
+        nameObject = name;
+        descriptionObject = description;
     }
 }

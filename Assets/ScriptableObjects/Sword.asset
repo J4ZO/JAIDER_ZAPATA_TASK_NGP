@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee1c2795ba03ad43b0f2abb992aadf8, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: Assembly-CSharp::Items
+  id: 1
   itemName: Sword
   itemSprite: {fileID: -294989453, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
   itemType: 1
-  amount: 0
+  amount: 1
+  itemDescription: 

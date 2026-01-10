@@ -4,12 +4,11 @@ using UnityEngine;
 public class InventoryUI : MonoBehaviour
 {
     [SerializeField] private InventorySlotUI inventorySlotUI;
-    [SerializeField] private int inventorySlot = 16;
     public bool isInventoryOpen = false;
     
     private void OnEnable()
     {
-        inventorySlotUI.InitialializeSlotUI(inventorySlot);
+        inventorySlotUI.InitialializeSlotUI();
     }
     
 

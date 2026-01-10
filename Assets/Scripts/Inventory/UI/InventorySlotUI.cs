@@ -9,22 +9,29 @@ public class InventorySlotUI : MonoBehaviour
     
     public List<InventorItemUI> listInventorySlotUI = new List<InventorItemUI>();
 
-    public void InitialializeSlotUI(int invertorySize)
+    public void InitialializeSlotUI()
     {
-        
-        if (listInventorySlotUI != null)
+        if (listInventorySlotUI == null) return;
+        foreach (InventorItemUI itemUI in listInventorySlotUI)
         {
-            foreach (InventorItemUI itemUI in listInventorySlotUI)
-            {
-                Destroy(itemUI.gameObject);
-            }
+            bool hasSprite = itemUI.imageChild != null && 
+                             itemUI.imageChild.sprite != null;
+            itemUI.gameObject.SetActive(hasSprite);
         }
-        for (int i = 0; i < invertorySize; i++)
+    }
+
+    public void ShowItem(int id, string nameObject, Sprite sprite, int amount, string description )
+    {
+        if (listInventorySlotUI == null) return;
+        foreach (InventorItemUI itemUI in listInventorySlotUI)
         {
-            InventorItemUI itemUI = Instantiate(inventoryPrefab, Vector3.zero, quaternion.identity)
-                .GetComponent<InventorItemUI>();
-            itemUI.gameObject.transform.SetParent(inventorySlotContainer);
-            listInventorySlotUI.Add(itemUI);
+            if (itemUI.imageChild == null || itemUI.imageChild.sprite == null)
+            {
+                Debug.Log($"Added at: {itemUI.gameObject.name}");
+                itemUI.InsertData(id, nameObject, sprite, amount, description);
+                return;
+            }
+            return;
         }
     }
     

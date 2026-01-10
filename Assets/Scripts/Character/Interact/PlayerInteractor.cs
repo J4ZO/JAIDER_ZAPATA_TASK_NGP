@@ -15,7 +15,7 @@ public class PlayerInteractor : MonoBehaviour
       
       IInteractable interactable = hitObject.GetComponent<IInteractable>();
       interactable?.Interact();
-      Debug.Log("Interacted" + hitObject.name);
+     Debug.Log("Interacted" + hitObject.name);
    }
 
    private void OnDrawGizmos()

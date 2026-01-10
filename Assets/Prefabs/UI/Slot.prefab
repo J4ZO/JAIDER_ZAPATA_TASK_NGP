@@ -301,6 +301,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b71148756ee07c4691d4c4857d70fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventorItemUI
+  imageChild: {fileID: 2454757159857118015}
+  amountChild: {fileID: 7804352018323793281}
+  nameObject: 
+  descriptionObject: 
 --- !u!1 &7369458452290711823
 GameObject:
   m_ObjectHideFlags: 0
