@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerClickHandler
 {
@@ -25,8 +26,10 @@ public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
+    
     public void OnBeginDrag(PointerEventData eventData)
     { 
+     
         CurrentDraggedItem = inventoryItemUI;
         
         if (inventoryItemUI == null || !inventoryItemUI.HasItem)
@@ -41,7 +44,7 @@ public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         
         canvasGroup.blocksRaycasts = false;
     }
-
+    
     public void OnEndDrag(PointerEventData eventData)
     {
         List<RaycastResult> results = new List<RaycastResult>();
@@ -59,11 +62,6 @@ public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
                 break;
             }
         }
-    
-        if (targetSlot != null)
-        {
-            Debug.Log(targetSlot.name);
-        }
         
         canvasGroup.blocksRaycasts = true;
         
@@ -73,6 +71,7 @@ public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
             
             if (targetDrop != null)
             {
+                
                 Transform targetOriginalParent = targetDrop.transform.parent;
                 
                 targetDrop.transform.SetParent(originalParent);
@@ -80,10 +79,10 @@ public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
                 
                 transform.SetParent(targetOriginalParent);
                 rectTransform.anchoredPosition = Vector2.zero;
+                
             }
             else
             {
-                
                 transform.SetParent(targetSlot.transform);
                 rectTransform.anchoredPosition = Vector2.zero;
             }
@@ -93,25 +92,13 @@ public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
             transform.SetParent(originalParent);
             rectTransform.anchoredPosition = Vector2.zero;
         }
-
     }
-
     public void OnPointerClick(PointerEventData eventData)
     {
         if (inventoryItemUI != null && inventoryItemUI.HasItem)
         {
-            Debug.Log($"Item seleccionado: {inventoryItemUI.name}");
+            descriptionUI.ShowInventory(inventoryItemUI.imageChild, inventoryItemUI.nameObject, inventoryItemUI.descriptionObject, inventoryItemUI.itemType, inventoryItemUI);
             
-            descriptionUI.ShowInventory(inventoryItemUI.imageChild, inventoryItemUI.nameObject, inventoryItemUI.descriptionObject);
-          
-            if (eventData.button == PointerEventData.InputButton.Left)
-            {
-                Debug.Log("Click izquierdo - Seleccionar item");
-            }
-            else if (eventData.button == PointerEventData.InputButton.Right)
-            {
-                Debug.Log("Click derecho - Abrir menú");
-            }
         }
     }
 }

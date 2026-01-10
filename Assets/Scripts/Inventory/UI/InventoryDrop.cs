@@ -23,10 +23,6 @@ public class InventoryDrop : MonoBehaviour, IDropHandler
         Debug.Log("Drop item");
         
     }
-
-    private void SwapElements()
-    {
-        
-    }
+    
     
 }
