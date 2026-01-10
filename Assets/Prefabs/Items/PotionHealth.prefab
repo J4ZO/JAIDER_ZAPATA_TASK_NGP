@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2418902770347976231}
   - component: {fileID: 8763731347541443078}
-  - component: {fileID: 6435270344006882520}
   - component: {fileID: 5261801070166245093}
   - component: {fileID: 6811588887582685981}
-  - component: {fileID: 3036115618569944915}
+  - component: {fileID: 8498216739824476000}
   m_Layer: 6
   m_Name: PotionHealth
   m_TagString: Untagged
@@ -94,8 +93,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &6435270344006882520
-CircleCollider2D:
+--- !u!114 &5261801070166245093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545298281022457983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a08cb0f924516418a1cb776819c152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectInteract
+  item: {fileID: 6811588887582685981}
+  inventorySlotUI: {fileID: 0}
+--- !u!114 &6811588887582685981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545298281022457983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee1c2795ba03ad43b0f2abb992aadf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Items
+  id: 3
+  itemName: PotionHealth
+  itemSprite: {fileID: 1630115305, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
+  itemType: 1
+  amount: 1
+  itemDescription: Potion that gives you 10+ health points
+--- !u!61 &8498216739824476000
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -128,59 +159,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
---- !u!114 &5261801070166245093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545298281022457983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06a08cb0f924516418a1cb776819c152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectInteract
-  item: {fileID: 6811588887582685981}
-  inventorySlotUI: {fileID: 0}
---- !u!114 &6811588887582685981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545298281022457983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ee1c2795ba03ad43b0f2abb992aadf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Items
-  id: 3
-  itemName: PotionHealth
-  itemSprite: {fileID: -294989453, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
-  itemType: 1
-  amount: 1
-  itemDescription: Pothon that gives you 10+ health
---- !u!95 &3036115618569944915
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545298281022457983}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 87b4dc6001357854d9bbd927fb569c8d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_Offset: {x: -0.05786991, y: -0.13067245}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.7125187, y: 0.84319305}
+  m_EdgeRadius: 0

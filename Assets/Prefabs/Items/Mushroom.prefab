@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6435270344006882520}
   - component: {fileID: 5261801070166245093}
   - component: {fileID: 6811588887582685981}
-  - component: {fileID: 8241022600818449790}
   m_Layer: 6
   m_Name: Mushroom
   m_TagString: Untagged
@@ -161,26 +160,4 @@ MonoBehaviour:
   itemSprite: {fileID: 311288727, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
   itemType: 1
   amount: 1
-  itemDescription: increment your strength  for 10 seconds
---- !u!95 &8241022600818449790
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545298281022457983}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f9e065affd6857549a71b9ee4554ce9d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  itemDescription: Increase your strength for 10 seconds

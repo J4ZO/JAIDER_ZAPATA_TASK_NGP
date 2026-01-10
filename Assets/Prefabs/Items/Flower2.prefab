@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Items
   id: 6
   itemName: Flower2
-  itemSprite: {fileID: -563898242, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
+  itemSprite: {fileID: 1208782529, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
   itemType: 4
   amount: 1
   itemDescription: Deisys
