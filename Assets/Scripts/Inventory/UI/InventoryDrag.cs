@@ -3,13 +3,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
-public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerClickHandler
 {
     private RectTransform rectTransform;
     [SerializeField] Canvas canvas;
     public Transform originalParent;
     [SerializeField] private Transform dragLayer;
     [SerializeField] private InventorItemUI inventoryItemUI;
+    [SerializeField] private InventoryDescriptioUI descriptionUI;
     private CanvasGroup canvasGroup;
     
     public static InventorItemUI CurrentDraggedItem { get; private set; }
@@ -94,5 +95,23 @@ public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
         }
 
     }
-   
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (inventoryItemUI != null && inventoryItemUI.HasItem)
+        {
+            Debug.Log($"Item seleccionado: {inventoryItemUI.name}");
+            
+            descriptionUI.ShowInventory(inventoryItemUI.imageChild, inventoryItemUI.nameObject, inventoryItemUI.descriptionObject);
+          
+            if (eventData.button == PointerEventData.InputButton.Left)
+            {
+                Debug.Log("Click izquierdo - Seleccionar item");
+            }
+            else if (eventData.button == PointerEventData.InputButton.Right)
+            {
+                Debug.Log("Click derecho - Abrir menú");
+            }
+        }
+    }
 }
