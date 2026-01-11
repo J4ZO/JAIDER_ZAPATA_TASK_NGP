@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5261801070166245093}
   - component: {fileID: 6811588887582685981}
   m_Layer: 6
-  m_Name: Mushroom
+  m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: -1799546479
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 311288727, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
+  m_Sprite: {fileID: -294989453, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,9 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee1c2795ba03ad43b0f2abb992aadf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Items
-  id: 8
-  itemName: Mushrom
-  itemSprite: {fileID: 311288727, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
-  itemType: 1
+  id: 1
+  itemName: Sword
+  itemSprite: {fileID: -294989453, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
+  itemType: 2
   amount: 1
-  itemDescription: Increase your strength for 10 seconds
+  itemDescription: Sword made of stone
