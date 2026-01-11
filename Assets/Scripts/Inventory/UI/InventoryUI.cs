@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class InventoryUI : MonoBehaviour
@@ -10,6 +11,8 @@ public class InventoryUI : MonoBehaviour
     [Header("Detail Panel")]
     [SerializeField] private ItemDetailPanel detailPanel;
     
+    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private HealthPlayer healthPlayer;
     
     private InventorySlotUI[] slotUIs;
     private InventorySystem inventorySystem;
@@ -163,6 +166,31 @@ public class InventoryUI : MonoBehaviour
         
         Debug.Log($"[InventoryUI] Item USED: {item.itemName} (ID: {item.id})");
 
+        switch (item.id)
+        {
+            case 3: 
+                playerMovement.movementSpeedWalking *= 1.5f;
+                playerMovement.runSpeed *= 1.5f;
+                playerMovement.ReturnSpeed();
+                Debug.Log("[Player] Carrot consumed: Speed increased 1.5x");
+                break;
+
+            case 4: 
+                playerMovement.movementSpeedWalking *= 3f;
+                playerMovement.runSpeed *= 3f;
+                playerMovement.ReturnSpeed();
+                Debug.Log("[Player] Mushroom consumed: Speed increased 3x");
+                break;
+
+            case 5: 
+                healthPlayer.Health(30f); 
+                Debug.Log("[Player] Potion consumed: +30 Health");
+                break;
+
+            default:
+                Debug.Log("[InventoryUI] No effect applied for this item");
+                break;
+        }
         
         bool success = inventorySystem.RemoveFromSlot(slotIndex, 1);
 
@@ -187,6 +215,8 @@ public class InventoryUI : MonoBehaviour
                 }
             }
         }
+        
+        detailPanel.ClearDisplay();
     }
     
     private void HandleDeleteItem(int slotIndex)

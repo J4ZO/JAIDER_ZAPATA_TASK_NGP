@@ -1,8 +1,9 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
-{ 
-    public float movementSpeedWalking = 5f; 
+{
+    public float movementSpeedWalking = 5f;
     public float runSpeed = 10f;
 
     private Rigidbody2D rb;
@@ -10,16 +11,28 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-       rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void Move(Vector3 direction)
     {
-       movementDirection = new Vector2(direction.x, direction.y).normalized;
-       Debug.Log("Moving");
+        movementDirection = new Vector2(direction.x, direction.y).normalized;
+        Debug.Log("Moving");
     }
 
-    private void FixedUpdate()
+    public void ReturnSpeed()
+    {
+        StartCoroutine(SpeedWait());
+    }
+
+    private IEnumerator SpeedWait()
+    {
+        yield return new WaitForSeconds(5f);
+        movementSpeedWalking = 5f;
+        runSpeed = 10f;
+    }
+
+private void FixedUpdate()
     {
        if (rb != null)
        {

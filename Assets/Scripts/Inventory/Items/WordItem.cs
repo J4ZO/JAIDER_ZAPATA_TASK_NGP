@@ -10,7 +10,7 @@ public class WorldItem : MonoBehaviour
     [SerializeField] private int quantity = 1;
 
     [Header("Interaction")]
-    [SerializeField] private float interactionRange = 2f;
+    [SerializeField] private float interactionRange = 1f;
     [SerializeField] private InputActionReference pickUpAction;
     [SerializeField] private GameObject interactionPrompt;
 

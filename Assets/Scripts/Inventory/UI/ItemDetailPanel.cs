@@ -2,11 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-/// <summary>
-/// Displays detailed information about a selected item.
-/// 
-/// Single Responsibility: Display item details UI
-/// </summary>
 public class ItemDetailPanel : MonoBehaviour
 {
     [Header("UI References")]

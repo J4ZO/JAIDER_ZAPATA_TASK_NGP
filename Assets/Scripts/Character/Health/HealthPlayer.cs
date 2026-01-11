@@ -13,6 +13,11 @@ public class HealthPlayer : MonoBehaviour
         health -= damage;
         playerAnimation.HurtingAnimation();
     }
+    public void Health(float amount)
+    {
+        if (isDead) return;
+        health += amount;
+    }
     
     
     public void Die()
