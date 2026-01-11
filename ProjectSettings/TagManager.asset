@@ -8,12 +8,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wall
   - Water
   - UI
   - Object
   - NPC
-  - 
+  - Player
   - 
   - 
   - 
@@ -61,6 +61,9 @@ TagManager:
     locked: 0
   - name: NPC
     uniqueID: 3881406479
+    locked: 0
+  - name: Enemy
+    uniqueID: 1928400137
     locked: 0
   - name: Player
     uniqueID: 3662093531

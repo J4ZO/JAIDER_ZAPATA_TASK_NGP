@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerInteractor playerInteract;
     [SerializeField] private InventoryUI inventoryUI;
     [SerializeField] private PlayerAnimation playerAnimation;
+    [SerializeField] private HealthPlayer healthPlayer;
     
     public InputActionReference moveAction;
     public InputActionReference pickUpAction;
@@ -42,9 +43,6 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
         
-        // <----------------- Attack ------------------------>
-
-        
         // <----------------- Pick up ------------------------>
         if (pickUpAction.action.WasPressedThisFrame()) playerInteract.TryInteract();
         
@@ -60,15 +58,4 @@ public class PlayerController : MonoBehaviour
         
     }
     
-    public void TakeDamage()
-    {
-        if (isDead) return;
-        playerAnimation.HurtingAnimation();
-    }
-    
-    public void Die()
-    {
-        isDead = true;
-        playerAnimation.DeathAnimation();
-    }
 }
