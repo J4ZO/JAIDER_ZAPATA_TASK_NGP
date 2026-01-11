@@ -8,6 +8,7 @@ public class PatrolGoblin : MonoBehaviour
     [SerializeField] private float minimunDistance = 0.1f;
     
     [SerializeField] private MovementGoblin movementGoblin;
+    [SerializeField] private AnimationGoblin animationGoblin;
     
     private int currentWaypoint = 0;
     private bool isWaiting = false;
@@ -52,9 +53,9 @@ public class PatrolGoblin : MonoBehaviour
     private IEnumerator WaitInWaypoint()
     {
         isWaiting = true;
-        
+        animationGoblin.Stop();
         yield return new WaitForSeconds(waitTimePatrol);
-        
+        animationGoblin.WalkingAnimation();
         
         currentWaypoint++;
         

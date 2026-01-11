@@ -7,8 +7,10 @@ public class GoblinController : MonoBehaviour
     [SerializeField] private PatrolGoblin patrolGoblin;
     [SerializeField] private GoblinVision goblinVision;
     [SerializeField] private GoblinAttack goblinAttack;
+    [SerializeField] private AnimationGoblin animationGoblin;
     
     private Transform playerTransform;
+    private bool canAttack;
     
     private enum GoblinState
     {
@@ -57,6 +59,7 @@ public class GoblinController : MonoBehaviour
 
     private void UpdateChasing()
     {
+        animationGoblin.RunningAnimation();
         if (!goblinVision.detectedPlayer) StartCoroutine(WaitToReturnPatroll());
         
         Vector2 direction = playerTransform.position - transform.position;
@@ -78,16 +81,29 @@ public class GoblinController : MonoBehaviour
 
     public void UpdateAttacking()
     {
-        movementGoblin.Stop();
-        if (!goblinAttack.isAttacking) StartCoroutine(WaitToReturnChase());
+        if(!canAttack && goblinAttack.isAttacking)
+        {
+            animationGoblin.AttackAnimation();
+            movementGoblin.Stop();
+            StartCoroutine(WaitToAttack());
+        }
+        
+        
+        if (!goblinAttack.isAttacking) currentState = GoblinState.Chasing;
+    }
+    
+    private IEnumerator WaitToAttack()
+    {
+        canAttack = true;
+        yield return new WaitForSeconds(1f);
+        canAttack = false;
     }
     
     private IEnumerator WaitToReturnChase()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(1f);
         Debug.Log("Chasing again");
         currentState = GoblinState.Chasing;
-        patrolGoblin.ResumePatrol();
     }
     
 
