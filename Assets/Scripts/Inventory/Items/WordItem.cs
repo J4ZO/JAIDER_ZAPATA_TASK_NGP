@@ -62,6 +62,7 @@ public class WorldItem : MonoBehaviour
 
         if (success)
         {
+            AudioManager.Instance.PlaySFX("pickup");
             Debug.Log($"[WorldItem] Picked up {quantity}x {itemDefinition.itemName}");
             
             Destroy(gameObject);

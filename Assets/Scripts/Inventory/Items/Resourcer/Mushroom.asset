@@ -17,4 +17,4 @@ MonoBehaviour:
   icon: {fileID: 311288727, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
   itemType: 1
   maxStackSize: 1
-  description: Red mushroom
+  description: Red mushroom gives you 3x of speed for 5 seconds

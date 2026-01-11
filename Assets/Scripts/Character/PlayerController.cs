@@ -11,12 +11,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerAnimation playerAnimation;
     [SerializeField] private HealthPlayer healthPlayer;
     [SerializeField] private DialogueUI dialogueUI;
+    [SerializeField] private PauseUI pauseUI;
     
     public InputActionReference moveAction;
     public InputActionReference pickUpAction;
     public InputActionReference talkAction;
     public InputActionReference openInventoryAction;
     public InputActionReference runAction;
+    public InputActionReference openPauseAction;
     
     private bool isDead = false;
     
@@ -64,6 +66,15 @@ public class PlayerController : MonoBehaviour
         }else if(!inventoryUI.isInventoryOpen && openInventoryAction.action.WasPressedThisFrame())
         {
             inventoryUI.OpenInventory();
+        }
+        
+        // <----------------- Pause Toggle ------------------------>
+        if(pauseUI.isPaused && openPauseAction.action.WasPressedThisFrame())
+        {
+            pauseUI.ClosePauseUI();
+        }else if(!pauseUI.isPaused && openPauseAction.action.WasPressedThisFrame())
+        {
+            pauseUI.OpenPauseUI();
         }
         
     }

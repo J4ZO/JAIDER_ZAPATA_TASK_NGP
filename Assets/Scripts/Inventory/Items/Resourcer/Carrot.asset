@@ -17,4 +17,4 @@ MonoBehaviour:
   icon: {fileID: 1538917487, guid: 14120bef40956c849b8b99e0389d1171, type: 3}
   itemType: 1
   maxStackSize: 1
-  description: Hide from bunnys!!
+  description: Hide from bunnys!! Gives you 1.5x of speed for 5 seconds
