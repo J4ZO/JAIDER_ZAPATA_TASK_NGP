@@ -10,12 +10,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InventoryUI inventoryUI;
     [SerializeField] private PlayerAnimation playerAnimation;
     [SerializeField] private HealthPlayer healthPlayer;
+    [SerializeField] private DialogueUI dialogueUI;
     
     public InputActionReference moveAction;
     public InputActionReference pickUpAction;
     public InputActionReference openInventoryAction;
     public InputActionReference runAction;
-    public InputActionReference attackAction;
     
     private bool isDead = false;
     
@@ -45,6 +45,14 @@ public class PlayerController : MonoBehaviour
         
         // <----------------- Pick up ------------------------>
         if (pickUpAction.action.WasPressedThisFrame()) playerInteract.TryInteract();
+        // <----------------- NPC Dialogue Toggle ------------------------>
+        if(dialogueUI.isDialogueOpen && pickUpAction.action.WasPressedThisFrame())
+        {
+            dialogueUI.CloseDialogue();
+        }else if(!dialogueUI.isDialogueOpen && pickUpAction.action.WasPressedThisFrame())
+        {
+            dialogueUI.OpenDialogue();
+        }
         
         
         // <----------------- Inventory Toggle ------------------------>
