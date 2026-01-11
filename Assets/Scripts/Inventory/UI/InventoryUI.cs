@@ -105,7 +105,7 @@ public class InventoryUI : MonoBehaviour
         
         if (slot != null && !slot.IsEmpty && detailPanel != null)
         {
-            detailPanel.ShowItemDetails(slot.itemStack.itemDefinition, slot.itemStack.quantity);
+            detailPanel.ShowItemDetails(slot.itemStack.itemDefinition, slot.itemStack.quantity, selectedSlotIndex);
         }
         
     }
@@ -200,8 +200,8 @@ public class InventoryUI : MonoBehaviour
         Debug.Log($"[InventoryUI] Item DELETED: {item.itemName} x{quantity} (ID: {item.id})");
 
         
-        // slot.Clear();
-        
+        slot.Clear();
+        detailPanel.ClearDisplay();
         inventorySystem.ClearSlot(slotIndex);
 
         
