@@ -19,6 +19,7 @@ public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        canvas = FindFirstObjectByType<Canvas>();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -97,7 +98,7 @@ public class InventoryDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
     {
         if (inventoryItemUI != null && inventoryItemUI.HasItem)
         {
-            descriptionUI.ShowInventory(inventoryItemUI.imageChild, inventoryItemUI.nameObject, inventoryItemUI.descriptionObject, inventoryItemUI.itemType, inventoryItemUI);
+            // descriptionUI.ShowInventory(inventoryItemUI.imageChild, inventoryItemUI.nameObject, inventoryItemUI.descriptionObject, inventoryItemUI.itemType, inventoryItemUI);
             
         }
     }

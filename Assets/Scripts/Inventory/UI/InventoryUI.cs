@@ -1,39 +1,211 @@
-using System;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class InventoryUI : MonoBehaviour
 {
-    [SerializeField] private InventorySlotUI inventorySlotUI;
-    public bool isInventoryOpen = false;
+    [Header("UI References")]
+    [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private Transform slotsContainer;
+    [SerializeField] private GameObject slotPrefab;
+
+    [Header("Detail Panel")]
+    [SerializeField] private ItemDetailPanel detailPanel;
     
-    private void OnEnable()
+    
+    private InventorySlotUI[] slotUIs;
+    private InventorySystem inventorySystem;
+    private int selectedSlotIndex = -1;
+    public bool isInventoryOpen => inventoryPanel != null && inventoryPanel.activeSelf;
+    public void Initialize(InventorySystem inventory)
     {
-        inventorySlotUI.InitialializeSlotUI();
+        inventorySystem = inventory;
+
+       
+        CreateSlotUIs(inventory.SlotCount);
+
+        
+        inventorySystem.OnSlotChanged += OnSlotChanged;
+        inventorySystem.OnInventoryChanged += RefreshUI;
+        
+        if (detailPanel != null)
+        {
+            detailPanel.OnUseItem += HandleUseItem;
+            detailPanel.OnDeleteItem += HandleDeleteItem;
+        }
+        
+        RefreshUI();
+
+        
+        inventoryPanel.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        
+        if (inventorySystem != null)
+        {
+            inventorySystem.OnSlotChanged -= OnSlotChanged;
+            inventorySystem.OnInventoryChanged -= RefreshUI;
+        }
+        
+        if (detailPanel != null)
+        {
+            detailPanel.OnUseItem -= HandleUseItem;
+            detailPanel.OnDeleteItem -= HandleDeleteItem;
+        }
     }
     
-
-
-    private void ToggleInventory()
+    private void CreateSlotUIs(int slotCount)
     {
-        isInventoryOpen = !isInventoryOpen;
-        gameObject.SetActive(isInventoryOpen);
+        slotUIs = new InventorySlotUI[slotCount];
+
+        for (int i = 0; i < slotCount; i++)
+        {
+            GameObject slotObj = Instantiate(slotPrefab, slotsContainer);
+            InventorySlotUI slotUI = slotObj.GetComponent<InventorySlotUI>();
+            
+            slotUI.Initialize(i);
+            slotUI.OnSlotClicked += OnSlotClicked;
+            slotUI.OnSlotDragSwap += OnSlotDragSwap;
+
+            slotUIs[i] = slotUI;
+        }
+    }
+    
+    private void OnSlotChanged(int slotIndex)
+    {
+        if (slotIndex < 0 || slotIndex >= slotUIs.Length) return;
+
+        InventorySlot slot = inventorySystem.GetSlot(slotIndex);
+        slotUIs[slotIndex].UpdateSlot(slot);
+    }
+
+  
+    private void RefreshUI()
+    {
+        for (int i = 0; i < slotUIs.Length; i++)
+        {
+            OnSlotChanged(i);
+        }
+    }
+    
+    private void OnSlotClicked(int slotIndex)
+    {
+        InventorySlot slot = inventorySystem.GetSlot(slotIndex);
+
         
-        Time.timeScale = isInventoryOpen ? 0f : 1f;
+        if (selectedSlotIndex == slotIndex)
+        {
+            DeselectSlot();
+            return;
+        }
+
+        
+        selectedSlotIndex = slotIndex;
+        UpdateSlotHighlights();
+        
+        if (slot != null && !slot.IsEmpty && detailPanel != null)
+        {
+            detailPanel.ShowItemDetails(slot.itemStack.itemDefinition, slot.itemStack.quantity);
+        }
+        
+    }
+    
+    private void DeselectSlot()
+    {
+        selectedSlotIndex = -1;
+        UpdateSlotHighlights();
+        
+    }
+    
+    private void UpdateSlotHighlights()
+    {
+        // for (int i = 0; i < slotUIs.Length; i++)
+        // {
+        //     slotUIs[i].SetHighlight(i == selectedSlotIndex);
+        // }
+    }
+    
+    private void OnSlotDragSwap(int fromIndex, int toIndex)
+    {
+        inventorySystem.SwapSlots(fromIndex, toIndex);
+        DeselectSlot(); 
+    }
+    
+    public void ToggleInventory()
+    {
+        bool isOpen = !inventoryPanel.activeSelf;
+        inventoryPanel.SetActive(isOpen);
+
+        if (!isOpen)
+        {
+            DeselectSlot();
+        }
+    }
+    
+    public void OpenInventory()
+    {
+        inventoryPanel.SetActive(true);
+        RefreshUI();
     }
     
     public void CloseInventory()
     {
-        if (isInventoryOpen)
-        {
-            ToggleInventory();
-        }
+        inventoryPanel.SetActive(false);
+        DeselectSlot();
     }
-
-    public void OpenInventory()
+    
+    private void HandleUseItem(int slotIndex)
     {
-        if (!isInventoryOpen)
+        InventorySlot slot = inventorySystem.GetSlot(slotIndex);
+        if (slot == null || slot.IsEmpty) return;
+
+        ItemDefinition item = slot.itemStack.itemDefinition;
+        
+        Debug.Log($"[InventoryUI] Item USED: {item.itemName} (ID: {item.id})");
+
+        
+        bool success = inventorySystem.RemoveFromSlot(slotIndex, 1);
+
+        if (success)
         {
-            ToggleInventory();
+           
+            if (slot.IsEmpty)
+            {
+              
+                DeselectSlot();
+            }
+            else
+            {
+                
+                if (detailPanel != null)
+                {
+                    detailPanel.ShowItemDetails(
+                        slot.itemStack.itemDefinition,
+                        slot.itemStack.quantity,
+                        slotIndex
+                    );
+                }
+            }
         }
     }
+    
+    private void HandleDeleteItem(int slotIndex)
+    {
+        InventorySlot slot = inventorySystem.GetSlot(slotIndex);
+        if (slot == null || slot.IsEmpty) return;
+
+        ItemDefinition item = slot.itemStack.itemDefinition;
+        int quantity = slot.itemStack.quantity;
+        
+        Debug.Log($"[InventoryUI] Item DELETED: {item.itemName} x{quantity} (ID: {item.id})");
+
+        
+        // slot.Clear();
+        
+        inventorySystem.ClearSlot(slotIndex);
+
+        
+        DeselectSlot();
+    }
+    
 }

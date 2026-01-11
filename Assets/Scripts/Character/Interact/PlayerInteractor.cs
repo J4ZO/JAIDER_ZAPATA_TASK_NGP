@@ -18,6 +18,17 @@ public class PlayerInteractor : MonoBehaviour
      Debug.Log("Interacted" + hitObject.name);
    }
 
+   public void TryNpc()
+   {
+      Collider2D hitObject = Physics2D.OverlapCircle(transform.position, radiusCollider, layerMask);
+
+      if (hitObject == null) return;
+      
+      IINPC interactable = hitObject.GetComponent<IINPC>();
+      interactable?.Show();
+      Debug.Log("NPC" + hitObject.name);
+   }
+
    private void OnDrawGizmos()
    {
       Gizmos.color = Color.orange;

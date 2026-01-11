@@ -23,16 +23,16 @@ public class InventoryButtonsUI : MonoBehaviour
 
     public void UseButton()
     {
-        if (inventoryDescriptionUI.type == ItemType.food)
-        {
-            DeleteButton();
-
-            // Increase Health
-        }
-        else if (inventoryDescriptionUI.type == ItemType.tool)
-        {
-            DeleteButton();
-            // Move to main inventory
-        }
+        // if (inventoryDescriptionUI.type == ItemType.food)
+        // {
+        //     DeleteButton();
+        //
+        //     // Increase Health
+        // }
+        // else if (inventoryDescriptionUI.type == ItemType.tool)
+        // {
+        //     DeleteButton();
+        //     // Move to main inventory
+        // }
     }
 }

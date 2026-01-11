@@ -4,13 +4,13 @@ using UnityEngine.Rendering;
 
 public class ObjectInteract : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Items item;
+    // [SerializeField] private Items item;
     [SerializeField] private InventorySlotUI inventorySlotUI;
     
     private SpriteRenderer spriteRenderer;
     private int id;
     private string itemNameObject;
-    private ItemType itemTypeObject;
+    // private ItemType itemTypeObject;
     private int amountObject;
     private String itemDescription;
 
@@ -21,19 +21,19 @@ public class ObjectInteract : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        id = item.id;
-        itemNameObject = item.itemName;
-        spriteRenderer.sprite = item.itemSprite;
-        itemTypeObject = item.itemType;
-        amountObject = item.amount;
-        itemDescription = item.itemDescription;
+        // id = item.id;
+        // itemNameObject = item.itemName;
+        // spriteRenderer.sprite = item.itemSprite;
+        // // itemTypeObject = item.itemType;
+        // amountObject = item.amount;
+        // itemDescription = item.itemDescription;
     }
     
 
     public void Interact()
     {
         Debug.Log("Interact");
-        inventorySlotUI.ShowItem(id, itemNameObject, spriteRenderer.sprite, amountObject, itemDescription, itemTypeObject);
+        // inventorySlotUI.ShowItem(id, itemNameObject, spriteRenderer.sprite, amountObject, itemDescription, itemTypeObject);
         Destroy(gameObject);
     }
     

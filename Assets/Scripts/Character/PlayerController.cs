@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     
     public InputActionReference moveAction;
     public InputActionReference pickUpAction;
+    public InputActionReference talkAction;
     public InputActionReference openInventoryAction;
     public InputActionReference runAction;
     
@@ -43,14 +44,15 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
         
-        // <----------------- Pick up ------------------------>
-        if (pickUpAction.action.WasPressedThisFrame()) playerInteract.TryInteract();
+        // // <----------------- Pick up ------------------------>
+        // if (pickUpAction.action.WasPressedThisFrame()) playerInteract.TryInteract();
         // <----------------- NPC Dialogue Toggle ------------------------>
-        if(dialogueUI.isDialogueOpen && pickUpAction.action.WasPressedThisFrame())
+        if(dialogueUI.isDialogueOpen && talkAction.action.WasPressedThisFrame())
         {
             dialogueUI.CloseDialogue();
-        }else if(!dialogueUI.isDialogueOpen && pickUpAction.action.WasPressedThisFrame())
+        }else if(!dialogueUI.isDialogueOpen && talkAction.action.WasPressedThisFrame())
         {
+            playerInteract.TryNpc();
             dialogueUI.OpenDialogue();
         }
         
